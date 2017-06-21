@@ -312,7 +312,7 @@ func (a *MetricAggregator) Receive(m *gostatsd.Metric, now time.Time) {
 	case gostatsd.SET:
 		a.receiveSet(m, tagsKey, nowNano)
 	default:
-		log.Errorf("Unknow metric type %s for %s", m.Type, m.Name)
+		log.Errorf("Unknown metric type %s for %s", m.Type, m.Name)
 	}
 }
 
